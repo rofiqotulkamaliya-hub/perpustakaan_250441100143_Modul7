@@ -97,10 +97,15 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::get('/buku-cari', [BukuController::class, 'cari'])->name('buku.cari');
+    // Route::get('/buku/{buku}/hapus', [KelolaBukuController::class, 'destroy'])->name('buku.hapus');
 
     Route::get('/laporan', LaporanController::class)
         ->middleware('permission:lihat laporan perpustakaan')
         ->name('laporan.index');
 });
+
+// Route::get('/demo/error', function () {
+//     throw new RuntimeException('Contoh kesalahan untuk demo APP_DEBUG');
+// });
 
 require __DIR__.'/auth.php';

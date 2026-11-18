@@ -47,6 +47,7 @@ class PeminjamanSayaController extends Controller
     public function show(Peminjaman $peminjaman)
     {
         Gate::authorize('view', $peminjaman);
+        // $peminjaman = Peminjaman::finsOrFail($peminjaman);
         
         $peminjaman->load(['buku.kategori', 'anggota']);
 

@@ -9,10 +9,6 @@ use Illuminate\Support\Str;
 
 class UserSeeder extends Seeder
 {
-    /**
-     * Akun bawaan. Role ditentukan di sini (lewat seeder), bukan dari form registrasi.
-     * Password semua akun: password
-     */
     public function run(): void
     {
         $passwordAdmin = env('SEED_ADMIN_PASSWORD') ?: Str::random(20);

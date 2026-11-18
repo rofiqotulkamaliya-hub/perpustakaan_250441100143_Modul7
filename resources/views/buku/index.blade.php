@@ -34,6 +34,7 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $buku->kategori->nama ?? '-' }}</td>
                     <td>{{ $buku->judul }}</td>
+                    <!-- <td>{!! $buku->judul !!}</td> -->
                     <td>{{ $buku->penulis }}</td>
                     <td>{{ $buku->tahun_terbit }}</td>
                     <td>

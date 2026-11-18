@@ -13,6 +13,19 @@ class KategoriSeeder extends Seeder
      */
     public function run(): void
     {
-        Kategori::factory()->count(3)->create();
+        $kategoris = [
+            ['nama' => 'Fiksi'],
+            ['nama' => 'Nonfiksi'],
+            ['nama' => 'Teknologi'],
+            ['nama' => 'Pendidikan'],
+            ['nama' => 'Sejarah'],
+            ['nama' => 'Pengembangan Diri'],
+        ];
+        foreach ($kategoris as $kategori) {
+            Kategori::updateOrCreate(
+                ['nama' => $kategori['nama']],
+                $kategori
+            );
+        }
     }
 }
