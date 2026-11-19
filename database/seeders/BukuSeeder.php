@@ -28,13 +28,13 @@ class BukuSeeder extends Seeder
                 'tahun_terbit' => '1925',
             ],
             [
-                'kategori' => 'NonFiksi',
+                'kategori' => 'Nonfiksi',
                 'judul' => 'Filosofi Teras',
                 'penulis' => 'Henry Manampiring',
                 'tahun_terbit' => '2018',
             ],
             [
-                'kategori' => 'NonFiksi',
+                'kategori' => 'Nonfiksi',
                 'judul' => 'Sapiens',
                 'penulis' => 'Yuval Noah Harari',
                 'tahun_terbit' => '2011',
