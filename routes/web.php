@@ -47,6 +47,9 @@ Route::middleware('auth')->group(function () {
             ->name('buku.show');
     });
 
+    Route::get('/buku/create', fn () => redirect()->route('kelola.buku.create'))
+        ->middleware('can:kelola-buku');
+
     Route::post('/peminjaman', [PeminjamanSayaController::class, 'store'])
         ->middleware('permission:mengajukan peminjaman buku')
         ->name('peminjaman.store');
